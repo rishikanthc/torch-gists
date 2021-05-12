@@ -11,9 +11,9 @@ setuptools.setup(
     description="A collection of models and utilities for pytorch",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/rishikanthc/torch-snippets",
+    url="https://github.com/rishikanthc/torch-gists",
     project_urls={
-        "Bug Tracker": "https://github.com/pypa/sampleproject/issues",
+        "Bug Tracker": "https://github.com/rishikanthc/torch-gists/issues",
     },
     classifiers=[
         "Programming Language :: Python :: 3",
