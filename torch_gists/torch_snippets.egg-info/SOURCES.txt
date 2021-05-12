@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+torch_snippets/models/__init__.py
+torch_snippets/models/mobilenetv2.py
+torch_snippets/models/resnet.py
+torch_snippets/models/vgg.py
+torch_snippets/torch_snippets.egg-info/PKG-INFO
+torch_snippets/torch_snippets.egg-info/SOURCES.txt
+torch_snippets/torch_snippets.egg-info/dependency_links.txt
+torch_snippets/torch_snippets.egg-info/top_level.txt

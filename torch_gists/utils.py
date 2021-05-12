@@ -51,18 +51,3 @@ class pl_wrapper(pl.LightningModule):
     
     def test_dataloader(self):
         return DataLoader(self.testset, batch_size = self.batch_size, shuffle=False, num_workers=self.nworkers)
-
-if __name__ == '__main__':
-    class test_model(pl_wrapper):
-        def __init__(self, batch_size = 256, nworkers = 2):
-            super().__init__(batch_size, nworkers)
-            self.l1 = torch.nn.Linear(100, 10)
-        
-        def forward(x):
-            x = self.l1(x)
-
-            return x
-    
-    model = test_model()
-    print(model.parameters)
-    print(model.batch_size, model.nworkers)
