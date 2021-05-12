@@ -4,8 +4,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="torch gists", # Replace with your own username
-    version="0.0.1",
+    name="torch-gists", # Replace with your own username
+    version="0.0.0.1",
     author="Rishikanth",
     author_email="r3chandr@ucsd.edu",
     description="A collection of models and utilities for pytorch",
@@ -20,7 +20,6 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    package_dir={"": "torch_gists"},
-    packages=setuptools.find_packages(where="torch_gists"),
+    packages=setuptools.find_packages(exclude=['tests']),
     python_requires=">=3.6",
 )

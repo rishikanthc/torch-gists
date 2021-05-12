@@ -1,2 +1,2 @@
-from torch_snippets import models
-from torch_snippets import utils
+from torch_gists import models
+from torch_gists import utils
