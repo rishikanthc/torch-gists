@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="torch-gists", # Replace with your own username
-    version="0.0.0.1",
+    version="0.0.0.2",
     author="Rishikanth",
     author_email="r3chandr@ucsd.edu",
     description="A collection of models and utilities for pytorch",
