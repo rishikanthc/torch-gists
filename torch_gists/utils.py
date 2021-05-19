@@ -4,11 +4,13 @@ from torch.utils.data import DataLoader
 import pytorch_lightning as pl
 
 class pl_wrapper(pl.LightningModule):
-    def __init__(self, batch_size = 512, nworkers = 8):
+    def __init__(self, batch_size = 512, nworkers = 8, ddp = True, pin_memory = False):
         super().__init__()
         self.batch_size = batch_size
         self.nworkers = nworkers
         self.loss = torch.nn.CrossEntropyLoss()
+        self.ddp = ddp
+        self.pin_memory = pin_memory
         self.save_hyperparameters()
 
 
@@ -47,7 +49,7 @@ class pl_wrapper(pl.LightningModule):
         return acc
 
     def train_dataloader(self):
-        return DataLoader(self.trainset, batch_size=self.batch_size, shuffle=True, num_workers=self.nworkers)
+        return DataLoader(self.trainset, batch_size=self.batch_size, shuffle=True, num_workers=self.nworkers, pin_memory = self.pin_memory)
     
     def test_dataloader(self):
-        return DataLoader(self.testset, batch_size = self.batch_size, shuffle=False, num_workers=self.nworkers)
+        return DataLoader(self.testset, batch_size = self.batch_size, shuffle=False, num_workers=self.nworkers, pin_memory = self.pin_memory)
